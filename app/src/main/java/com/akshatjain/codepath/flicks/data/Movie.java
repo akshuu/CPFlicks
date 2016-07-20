@@ -2,10 +2,12 @@ package com.akshatjain.codepath.flicks.data;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
+
 /**
  * Created by akshatjain on 7/16/16.
  */
-public class Movie {
+public class Movie implements Serializable {
 
     private int id;
 

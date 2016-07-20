@@ -6,6 +6,7 @@ package com.akshatjain.codepath.flicks;
 public class Constants {
     public static String API_KEY = "0c01824c7398d07b9c4dc842cd1c861f";
     public static String MOVIE_HOST = "https://api.themoviedb.org/3/";
+    public static String IMAGE_URL = "http://image.tmdb.org/t/p/w500";
     public static String NOW_PLAYING_ENDPOINT = "movie/now_playing";
     public static String MOVIE_ENDPOINT = "movie/";
     public static String MOVIE_IMAGE_ENDPOINT = "/images";

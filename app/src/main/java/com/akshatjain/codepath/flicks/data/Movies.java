@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,7 +13,7 @@ import java.util.List;
  * Created by akshatjain on 7/18/16.
  */
 
-public class Movies {
+public class Movies implements Serializable {
 
     @SerializedName("results")
     List<Movie> movies;
