@@ -36,7 +36,7 @@ public class MovieLists extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movie_lists);
         ButterKnife.bind(this);
-
+        getSupportActionBar().setTitle("Now Playing");
         if(savedInstanceState != null){
             movies = (Movies) savedInstanceState.getSerializable("Movies");
             adapter = new MovieAdapter(this,movies);
