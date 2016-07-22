@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.akshatjain.codepath.flicks.Constants;
 import com.akshatjain.codepath.flicks.R;
@@ -73,6 +74,7 @@ public class MovieLists extends AppCompatActivity {
                 @Override
                 public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
                     Log.e(Constants.TAG, "Failed Response == " + responseString);
+                    Toast.makeText(MovieLists.this,"Error getting the list of movies. Please try again...",Toast.LENGTH_LONG).show();
                     if (isRefresh) {
                         swipeRefreshLayout.setRefreshing(false);
                     }

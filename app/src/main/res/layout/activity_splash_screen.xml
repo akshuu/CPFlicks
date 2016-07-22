@@ -21,10 +21,10 @@
         style="@style/TextAppearance.AppCompat.Large"/>
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         android:id="@+id/imageView"
-        android:background="@drawable/ic_action_playback_play"
+        android:background="@drawable/film_reel_icon"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"/>
 </RelativeLayout>
