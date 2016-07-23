@@ -3,6 +3,7 @@ package com.akshatjain.codepath.flicks.data;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * Created by akshatjain on 7/16/16.
@@ -25,6 +26,9 @@ public class Movie implements Serializable {
 
     @SerializedName("vote_average")
     private float vote_average;
+
+    @SerializedName("release_date")
+    private Date releaseDate;
 
 
     public String getName() {
@@ -114,5 +118,13 @@ public class Movie implements Serializable {
 
     public void setVoteAverage(float vote_average) {
         this.vote_average = vote_average;
+    }
+
+    public Date getReleaseDate() {
+        return releaseDate;
+    }
+
+    public void setReleaseDate(Date releaseDate) {
+        this.releaseDate = releaseDate;
     }
 }

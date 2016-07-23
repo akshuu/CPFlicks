@@ -92,7 +92,6 @@ public class MovieAdapter extends BaseAdapter{
             holder.desc.setText(movie.getDescription());
             Display display = ((WindowManager) mContext.getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
             int displayRotation = display.getRotation();
-            Log.e(Constants.TAG, "++++++ tag ==" + view.getTag());
             String imageUrl = "";
             switch (displayRotation) {
                 case Surface.ROTATION_0:

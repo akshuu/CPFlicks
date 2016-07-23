@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:descendantFocusability="blocksDescendants"
                 android:paddingTop="@dimen/activity_vertical_margin">
 
 
@@ -21,6 +22,7 @@
         android:text="Large Text"
         android:id="@+id/txtTitle"
         android:paddingLeft="@dimen/activity_vertical_margin"
+        android:focusable="false"
         android:layout_toRightOf="@+id/imgPoster"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"

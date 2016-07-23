@@ -1,9 +1,12 @@
 package com.akshatjain.codepath.flicks.activities;
 
+import android.content.Intent;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -55,6 +58,19 @@ public class MovieLists extends AppCompatActivity {
             }
         });
 
+        movieList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+                if(movies != null){
+                    Movie movie = movies.getMovies().get(position);
+                    Intent movieDetail = new Intent(MovieLists.this,MovieDetails.class);
+                    movieDetail.putExtra("MovieDetails",movie);
+                    startActivity(movieDetail);
+                }
+
+            }
+        });
+
         swipeRefreshLayout.setColorSchemeResources(android.R.color.holo_blue_bright,
                 android.R.color.holo_green_light,
                 android.R.color.holo_orange_light,
@@ -68,7 +84,6 @@ public class MovieLists extends AppCompatActivity {
         if (isRefresh || movies == null) {
             RequestParams params = new RequestParams();
             String url = Constants.MOVIE_HOST + Constants.NOW_PLAYING_ENDPOINT + "/?api_key=" + Constants.API_KEY;
-            Log.d(Constants.TAG, "URL == " + url);
             client = new AsyncHttpClient();
             client.get(url, params, new TextHttpResponseHandler() {
                 @Override
