@@ -42,6 +42,8 @@ Here's a walkthrough of implemented user stories:
 
 <img src='http://imgur.com/a/7piPI' title='Video Walkthrough of Popcorn' width='' alt='Video Walkthrough' />
 
+Http link : http://imgur.com/a/7piPI
+
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
